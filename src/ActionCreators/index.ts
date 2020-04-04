@@ -9,9 +9,7 @@ const actionCreatorsImplementations: { [key: string]: actionCreatorTypes } = {
   BNPL: bnplActionCreator,
 };
 
-const actionCreator = (product: string): actionCreatorTypes => {
-  console.log({ product });
-  return actionCreatorsImplementations[product];
-};
+const actionCreator = (product: string): actionCreatorTypes =>
+  actionCreatorsImplementations[product];
 
 export default actionCreator;

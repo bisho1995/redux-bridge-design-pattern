@@ -35,13 +35,9 @@ const MyComponent: React.FC<MyComponentProps> = ({
 
 const mapStateToProps = ({ message }: ReducerState) => ({ message });
 
-// todo: figure out this any issue
-const mapDispatchToProps = (dispatch: any, ownProps: any) => ({
+const mapDispatchToProps = (dispatch: any) => ({
   updateMessage: (message: string) =>
     dispatch(Actions(message).updateMessage(message)),
 });
 
-// todo: find out what the fuck is this issue
-// todo: add type annotation for connect
-// @ts-ignore
 export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
